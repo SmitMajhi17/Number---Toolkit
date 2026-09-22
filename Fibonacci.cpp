@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int f1 = 0, f2 = 1, f3, n;
+
+    cout << "Enter number of terms: ";
+    cin >> n;
+
+    if (n < 0)
+    {
+        cout << "Invalid input";
+        return 0;
+    }
+
+    if (n == 0)
+    {
+        return 0;
+    }
+
+    if (n == 1)
+    {
+        cout << f1;
+        return 0;
+    }
+
+    cout << f1 << " " << f2 << " ";
+
+    for (int i = 0; i < n - 2; i++)
+    {
+        f3 = f1 + f2;
+        cout << f3 << " ";
+
+        f1 = f2;
+        f2 = f3;
+    }
+
+    return 0;
+}
